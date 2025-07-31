@@ -27,7 +27,19 @@
 
 ## 🚀 Deployment Options
 
-### Option 1: Digital Ocean App Platform (Recommended)
+### Option 1: Laravel Forge (Recommended for Laravel)
+
+**Steps:**
+1. Sign up at [forge.laravel.com](https://forge.laravel.com) ($19/month)
+2. Create server with your preferred provider (DigitalOcean, AWS, etc.)
+3. Create site and connect your GitHub repository
+4. Configure environment variables
+5. Deploy with zero-downtime!
+
+**Estimated cost:** $31-69/month (Forge + server costs)
+**Best for:** Professional Laravel deployments with automated management
+
+### Option 2: Digital Ocean App Platform
 
 **Steps:**
 1. Push code to GitHub: `git push origin main`
@@ -37,9 +49,10 @@
 5. Set environment variables (see DEPLOYMENT.md)
 6. Deploy!
 
-**Estimated cost:** $12-25/month (Basic plan)
+**Estimated cost:** $42-55/month (Basic to Professional plan)
+**Best for:** Fully managed, hands-off deployment
 
-### Option 2: Digital Ocean Droplet with Docker
+### Option 3: Digital Ocean Droplet with Docker
 
 **Steps:**
 1. Create Ubuntu 22.04 droplet ($6-12/month)
@@ -48,7 +61,10 @@
 4. Run: `docker-compose up -d`
 5. Configure reverse proxy (nginx)
 
-### Option 3: Traditional VPS Setup
+**Estimated cost:** $36-42/month
+**Best for:** More control with containerization
+
+### Option 4: Traditional VPS Setup
 
 **Steps:**
 1. Create Ubuntu 22.04 droplet
@@ -56,6 +72,9 @@
 3. Upload code via git or FTP
 4. Run database setup script
 5. Configure Apache virtual host
+
+**Estimated cost:** $12-24/month
+**Best for:** Budget-conscious deployments with full control
 
 ## 🔧 Environment Variables to Set
 
@@ -120,11 +139,17 @@ After deployment, access admin at: `https://yourdomain.com/admin`
 
 ## 💰 Estimated Costs
 
-**App Platform (Recommended):**
+**Laravel Forge (Recommended for Laravel):**
+- Forge subscription: $19/month
+- DigitalOcean droplet: $12-24/month
+- Managed database (optional): $15/month
+- **Total: ~$31-58/month**
+
+**App Platform:**
 - Basic: $12/month (512MB RAM, 1 vCPU)
 - Professional: $25/month (1GB RAM, 1 vCPU)
-- + Database: $15/month (basic MySQL)
-- + Redis: $15/month (basic Redis)
+- Database: $15/month (basic MySQL)
+- Redis: $15/month (basic Redis)
 - **Total: ~$42-55/month**
 
 **Droplet + Self-managed:**
@@ -140,9 +165,11 @@ After deployment, access admin at: `https://yourdomain.com/admin`
 
 ## 🔗 Useful Links
 
+- [Laravel Forge](https://forge.laravel.com) - Premium Laravel hosting
+- [Forge Deployment Guide](./FORGE-DEPLOYMENT.md) - Detailed Forge setup
 - [Digital Ocean App Platform](https://cloud.digitalocean.com/apps)
 - [Digital Ocean Droplets](https://cloud.digitalocean.com/droplets)
-- [Deployment Guide](./DEPLOYMENT.md)
+- [Deployment Guide](./DEPLOYMENT.md) - General deployment guide
 - [Laravel Deployment Docs](https://laravel.com/docs/deployment)
 
 ## 🆘 Need Help?
