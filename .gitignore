@@ -2,7 +2,8 @@
 .DS_Store
 .env
 .env.backup
-.env.production
+.env.local
+.env.deploy
 .phpactor.json
 .phpunit.result.cache
 /.fleet
@@ -22,3 +23,17 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Deployment artifacts
+/deployment
+temp-deployment
+
+# Keep deployment config files
+!.env.production
+!Dockerfile
+!docker-compose.yml
+!deploy.sh
+!deploy.ps1
+!setup-database.php
+!.do/
+!docker/
